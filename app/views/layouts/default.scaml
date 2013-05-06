@@ -1,0 +1,15 @@
+-import play.api.Play.current
+-@var body:String
+-@var title: String = "A scalate - play 2.1 project"
+!!!5
+%html(style="height:100%;" )
+  %head
+    %title #{title}
+    %meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
+    %link(rel="stylesheet" type="text/css" href="/assets/css/main.min.css")
+    %script(type="text/javascript" src='#{assets.js("libs/head.js")}')
+  %body(style="min-height:100%;" )
+    .wrapper(style="min-height:85%" )
+      -unescape(body)
+      %p
+    %footer(style="width: 100%; height: 300px; background-image: url(/assets/img/footer_bg.png);")
